@@ -1,0 +1,8 @@
+p {
+    color: darkgreen;
+    border: 2px solid green;
+    margin-left: 2rem;
+    width: fit-content;
+    padding: 0.4rem;
+    border-radius: 1rem;
+}
