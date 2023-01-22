@@ -291,3 +291,8 @@ svg#rocket-smoke {
         visibility: hidden;
     }
 }
+
+.blue {
+  background-color: #125699;
+  color: white;
+}

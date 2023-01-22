@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'holy moley';
+  isHidden = false;
+  clickHistory = [];
+
+  toggleParagraph() {
+    this.isHidden = !this.isHidden;
+    this.clickHistory.push(Date());
+  }
 }
