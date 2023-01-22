@@ -6,5 +6,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
+  allowNewServer = false;
+  serverCreationStatus = 'No Server was created';
+  serverName = 'Testserver';
+  userName = '';
+  disableNewUserName = true;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
+
+  ngOnInit() {
+
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server Created. Server name is ' + this.serverName;
+  }
+
+  onUpdateServerName(event: any) {
+    this.serverName = (event.target).value
+  }
+
+  changeUserName(event) {
+    this.userName = event.target.value;
+    this.checkUserName();
+  }
+
+  addUsername() {
+    this.userName = '';
+  }
+
+  checkUserName() {
+    this.userName === '' ?
+      this.disableNewUserName = true :
+      this.disableNewUserName = false;
+  }
 
 }
